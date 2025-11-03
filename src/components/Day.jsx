@@ -7,12 +7,6 @@
 function Day({ temperature, icon }) {
   const weatherIconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
-  function formatDay(dateStr) {
-    return new Intl.DateTimeFormat("en", {
-      weekday: "short",
-    }).format(new Date(dateStr));
-  }
-
   return (
     <li className="day">
       <img src={weatherIconUrl} />

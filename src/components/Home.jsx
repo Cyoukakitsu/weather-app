@@ -1,6 +1,6 @@
-import { Button, CircularProgress } from "@mui/material";
+import { Button } from "@mui/material";
 import styles from "./Home.module.css";
-
+import Loading from "./Loading";
 import Day from "./Day";
 import { useCurrentWeather } from "./hooks/useCurrentWeather";
 function Home({ setIsHome, position }) {
@@ -8,7 +8,7 @@ function Home({ setIsHome, position }) {
 
   return (
     <section className={styles.section}>
-      {isLoading && <CircularProgress />}
+      {isLoading && <Loading />}
       {!isLoading && (
         <>
           <Day temperature={temperature} icon={weatherIcon} />

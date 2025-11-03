@@ -3,9 +3,13 @@ import { getCurrentWeather } from "../../services/apiWeather";
 export function useCurrentWeather(position) {
   const [temperature, setTemperature] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [weatherIcon, setweatherIcon] = useState("");
+  const [weatherIcon, setWeatherIcon] = useState("");
 
   useEffect(() => {
+    if (!position || !position.latitude || !position.longitude) {
+      setIsLoading(false);
+      return;
+    }
     async function loadData() {
       setIsLoading(true);
 
@@ -18,13 +22,13 @@ export function useCurrentWeather(position) {
         max: weatherData.main.temp_max,
         min: weatherData.main.temp_min,
       });
-      setweatherIcon(weatherData.weather[0].icon);
+      setWeatherIcon(weatherData.weather[0].icon);
 
       setIsLoading(false);
     }
 
     loadData();
-  }, []);
+  }, [position]);
 
   return { temperature, weatherIcon, isLoading };
 }
