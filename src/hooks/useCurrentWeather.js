@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCurrentWeather } from "../../services/apiWeather";
+import { getCurrentWeather } from "../services/apiWeather";
 export function useCurrentWeather(position) {
   const [temperature, setTemperature] = useState(null);
   const [isLoading, setIsLoading] = useState(true);

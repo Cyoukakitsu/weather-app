@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import styles from "./Home.module.css";
 import Loading from "./Loading";
 import Day from "./Day";
-import { useCurrentWeather } from "./hooks/useCurrentWeather";
+import { useCurrentWeather } from "../hooks/useCurrentWeather";
 function Home({ setIsHome, position }) {
   const { temperature, weatherIcon, isLoading } = useCurrentWeather(position);
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Container from "./components/Container";
 import Forecast from "./components/Forecast";
 import Home from "./components/Home";
-import { useGeolocation } from "./components/hooks/useGeolocation";
+import { useGeolocation } from "./hooks/useGeolocation";
 import Loading from "./components/Loading";
 
 function App() {
