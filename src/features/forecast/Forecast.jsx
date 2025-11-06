@@ -1,5 +1,5 @@
-import Loading from "./Loading";
-import { useForecastWeather } from "../hooks/useForecastWeather";
+import Loading from "../../ui/Loading";
+import { useForecastWeather } from "../../hooks/useForecastWeather";
 import ForecastList from "./ForecastList";
 import AppNav from "./AppNav";
 // Weather forecast

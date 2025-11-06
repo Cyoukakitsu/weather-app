@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Container from "./components/Container";
-import Forecast from "./components/Forecast";
-import Home from "./components/Home";
+import Container from "./ui/Container";
+import Forecast from "./features/forecast/Forecast";
+import Home from "./features/home/Home";
 import { useGeolocation } from "./hooks/useGeolocation";
-import Loading from "./components/Loading";
+import Loading from "./ui/Loading";
 
 function App() {
   const { getCurrentLocation, isLoading, position } = useGeolocation();
