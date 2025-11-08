@@ -5,7 +5,7 @@ import AppNav from "./AppNav";
 // Weather forecast
 // https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
 
-function Forecast({ setIsHome, position }) {
+function Forecast({ position }) {
   const { weatherForecastList, isLoading } = useForecastWeather(position);
 
   return (
@@ -13,7 +13,7 @@ function Forecast({ setIsHome, position }) {
       {isLoading && <Loading />}
       {!isLoading && (
         <>
-          <AppNav setIsHome={setIsHome} />
+          <AppNav />
 
           <ForecastList weatherForecastList={weatherForecastList} />
         </>

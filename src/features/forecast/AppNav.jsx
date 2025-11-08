@@ -1,14 +1,17 @@
 // import { useState } from 'react';
 import { Link, Breadcrumbs } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-function AppNav({ setIsHome }) {
+function AppNav() {
+  const navigate = useNavigate();
+
   return (
     <Breadcrumbs aria-label="breadcrumb">
       <Link
         underline="hover"
         color="inherit"
         href="#"
-        onClick={() => setIsHome(true)}
+        onClick={() => navigate("/")}
       >
         Home
       </Link>
